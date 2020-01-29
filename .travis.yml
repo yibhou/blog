@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+  - lts/*
+cache:
+  directories:
+    - node_modules/
+install:
+  - yarn install
+script:
+  - yarn build
+deploy:
+  provider: pages
+  # If false Travis CI will delete all the files created during the build, which
+  # will probably delete what you are trying to upload
+  skip_cleanup: true
+  # Set in the settings page of your repository, as a secure variable
+  # you will need to generate a personal access token with the `public_repo` or `repo` scope
+  github_token: $GITHUB_TOKEN
+  # Directory to push to GitHub Pages, defaults to current directory
+  local_dir: public
+  # Repo slug, defaults to current repo
+  repo: yibhou/blog
+  # Branch to push local_dir contents to, defaults to `gh-pages`
+  target_branch: gh-pages
+  # Create incremental commit instead of doing push force (Optional)
+  keep_history: true
+  # Sets a custom domain for your website (generate a CNAME file), defaults to no custom domain support (Optional)
+  fqdn: mingjie.ltd
+  # Verbose about internal steps (Optional)
+  verbose: true
+  on:
+    branch: master

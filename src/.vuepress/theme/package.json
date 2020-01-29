@@ -1,0 +1,11 @@
+{
+  "name": "vuepress-theme-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Richard Lam",
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.9.2",
+    "@vuepress/theme-blog": "^2.1.0",
+    "@vuepress/theme-default": "^1.3.0"
+  }
+}

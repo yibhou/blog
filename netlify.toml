@@ -1,0 +1,7 @@
+
+# https://docs.netlify.com/configure-builds/file-based-configuration
+[build]
+# Build command
+command = "yarn build"
+# Publish directory
+publish = "public"
